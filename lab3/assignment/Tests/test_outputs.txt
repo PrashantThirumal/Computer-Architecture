@@ -1,0 +1,36 @@
+Sample Commands and Expected Outputs
+
+(1) Merge
+
+./cachesim Traces/trace.merge.txt 32 65536 8
+1048575, 1038446, 10129, 3058
+
+./cachesim Traces/trace.merge.txt 32 65536 4
+1048575, 1038179, 10396, 3130
+
+./cachesim Traces/trace.merge.txt 64 65536 4
+1048575, 1042197, 6378, 1870
+
+
+(2) Random 64K
+
+./cachesim Traces/trace.random64k.txt 32 65536 8
+262144, 260096, 2048, 0
+
+./cachesim Traces/trace.random64k.txt 32 65536 4
+262144, 260096, 2048, 0
+
+./cachesim Traces/trace.random64k.txt 64 65536 4
+262144, 261120, 1024, 0
+
+
+(3) gcc
+
+./cachesim Traces/trace.gcc.txt 32 65536 8
+1000000, 994989, 5011, 1810
+
+./cachesim Traces/trace.gcc.txt 32 65536 4
+1000000, 994415, 5585, 1801
+
+./cachesim Traces/trace.gcc.txt 64 65536 4
+1000000, 995971, 4029, 1132

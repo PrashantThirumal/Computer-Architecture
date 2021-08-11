@@ -1,0 +1,6 @@
+-> Note: Strict memory corruption checking is enabled.
+       0: PID 571 started
+       1: 571  w  0x2dce86 <- 84
+panic: Found frame table entry marked as mapped with no corresponding page table entry
+-> Hint: To debug a panic, use GDB.
+-> Set a breakpoint on the panic function and examine the backtrace to determine where it was called.
