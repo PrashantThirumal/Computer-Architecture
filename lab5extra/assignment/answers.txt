@@ -1,0 +1,64 @@
+ECE 3058
+Thread Scheduling Lab
+
+Name: Prashant Thirumal
+GT Username: pthirumal3
+
+Problem 1B
+----------
+
+1 CPU:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 389.4 s
+
+2 CPU:
+# of Context Switches: 109
+Total execution time: 36.3 s
+Total time spent in READY state: 80.6 s
+
+4 CPU:
+# of Context Switches: 182
+Total execution time: 33.2 s
+Total time spent in READY state: 0.3 s
+
+There is no linear relationship between the number of CPUs and total execution time.
+This is due to Amdahl's law. The execution time speedup increases asymptotically, depending on program parallelism, as the number of processors increases.
+
+
+Problem 2B
+----------
+
+800ms:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 389.4 s
+
+600ms:
+# of Context Switches: 98
+Total execution time: 67.6 s
+Total time spent in READY state: 380.1 s
+
+400ms:
+# of Context Switches: 99
+Total execution time: 67.7 s
+Total time spent in READY state: 374.7 s
+
+200ms:
+# of Context Switches: 99
+Total execution time: 67.6 s
+Total time spent in READY state: 358.4 s
+
+Shorter time slices means more context switches. Hence there will be a longer CPU overhead which in turn leads to a longer execution time.
+
+Problem 3B
+----------
+
+(B.1)
+It is almost impossible to always know how long a process is going to take before it runs to completion. Thus we can't implement this precisely.
+
+(B.2) 
+LTRF algorithm has the lowest wait time because the processes with the longer time remaining have the shortest CPU bursts with long IO bursts while the 
+processes with the shorter time reamining have higher CPU bursts but lower IO bursts.
+
+
